@@ -1,0 +1,6 @@
+framework module Pods_Basmety_BasmetyUITests {
+  umbrella header "Pods-Basmety-BasmetyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

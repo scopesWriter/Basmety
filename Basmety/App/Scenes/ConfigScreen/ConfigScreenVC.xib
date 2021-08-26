@@ -2,15 +2,39 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArbFONTS-Somar-Medium.otf">
+            <string>Somar-Medium</string>
+        </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfigScreenVC" customModule="Basmety" customModuleProvider="target">
             <connections>
+                <outlet property="arabicButton" destination="u1C-LZ-6ZZ" id="oWJ-fU-042"/>
+                <outlet property="arabicText" destination="tmH-rA-ioj" id="gtR-Yl-2rz"/>
+                <outlet property="countriesList" destination="Mva-n9-mtJ" id="8V6-F9-bP5"/>
+                <outlet property="countrySelectionArabic" destination="T8P-29-sp8" id="lSo-gg-AYU"/>
+                <outlet property="countrySelectionEnglish" destination="w0W-jM-rEe" id="2Eb-Ii-EWV"/>
+                <outlet property="englishButton" destination="qLc-9U-g7D" id="m5d-oh-7rT"/>
+                <outlet property="englishText" destination="n04-yx-yqR" id="07b-HT-4xl"/>
+                <outlet property="getStartedButton" destination="QVr-ro-6Aj" id="MIx-N3-WKe"/>
+                <outlet property="mainLogo" destination="9Th-A1-XHs" id="Cje-Wt-D8Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,15 +54,23 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLc-9U-g7D">
                             <rect key="frame" x="0.0" y="0.0" width="159" height="50"/>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                             <state key="normal" title="English">
                                 <color key="titleColor" name="CustomGray"/>
                             </state>
+                            <connections>
+                                <action selector="languageButtonPressed:" destination="-1" eventType="touchUpInside" id="xnP-lM-dM5"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1C-LZ-6ZZ">
                             <rect key="frame" x="191" y="0.0" width="159" height="50"/>
+                            <fontDescription key="fontDescription" name="Somar-Medium" family="Somar" pointSize="18"/>
                             <state key="normal" title=" العربية">
                                 <color key="titleColor" name="CustomGray"/>
                             </state>
+                            <connections>
+                                <action selector="languageButtonPressed:" destination="-1" eventType="touchUpInside" id="Mbk-qN-Soe"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -52,41 +84,93 @@
                         <constraint firstAttribute="height" constant="1" id="iwz-JL-4sI"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country Selection : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0W-jM-rEe">
-                    <rect key="frame" x="163" y="475" width="150" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Selection : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0W-jM-rEe">
+                    <rect key="frame" x="32" y="444" width="350" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="1u2-5A-j1s"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                    <color key="textColor" name="CustomGray"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVr-ro-6Aj">
-                    <rect key="frame" x="151" y="591" width="143" height="46"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVr-ro-6Aj">
+                    <rect key="frame" x="32" y="670" width="350" height="50"/>
                     <color key="backgroundColor" name="PenkishRed"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="v7v-Td-kPc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                     <state key="normal" title="Get Started">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="اختيار البلد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8P-29-sp8">
-                    <rect key="frame" x="176" y="438" width="74" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اختيار البلد" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8P-29-sp8">
+                    <rect key="frame" x="32" y="401" width="350" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="74c-ON-VvI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Somar-Medium" family="Somar" pointSize="24"/>
                     <color key="textColor" name="CustomGray"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يمكنك دائما تغير اختياراتك في قائمة الإعدادات للتطبيق" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmH-rA-ioj">
+                    <rect key="frame" x="32" y="561" width="350" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="X30-9t-gzh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Somar-Medium" family="Somar" pointSize="20"/>
+                    <color key="textColor" name="CustomGray"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n04-yx-yqR">
+                    <rect key="frame" x="32" y="604" width="350" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="m3u-2c-cee"/>
+                    </constraints>
+                    <string key="text">You can always reset your preferences in the
+ Application Settings</string>
+                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                    <color key="textColor" name="CustomGray"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-n9-mtJ" customClass="DropDown" customModule="iOSDropDown">
+                    <rect key="frame" x="32" y="495" width="350" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="CLM-a1-d8H"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T8P-29-sp8" secondAttribute="trailing" constant="32" id="344-9W-lQB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xcC-Zq-s6n" secondAttribute="trailing" constant="32" id="484-n5-l9q"/>
+                <constraint firstItem="w0W-jM-rEe" firstAttribute="top" secondItem="T8P-29-sp8" secondAttribute="bottom" constant="8" id="4jr-HF-vXL"/>
+                <constraint firstItem="tmH-rA-ioj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="6eW-Gv-x7w"/>
                 <constraint firstItem="rGX-m7-FSc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Drh-2T-pJn"/>
+                <constraint firstItem="n04-yx-yqR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="Eqf-vl-jGK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n04-yx-yqR" secondAttribute="trailing" constant="32" id="G3p-hi-qc7"/>
+                <constraint firstItem="T8P-29-sp8" firstAttribute="top" secondItem="xcC-Zq-s6n" secondAttribute="bottom" constant="8" id="Hmp-PZ-ZcB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Th-A1-XHs" secondAttribute="trailing" constant="32" id="I7u-WV-E4M"/>
+                <constraint firstItem="Mva-n9-mtJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="I94-vW-8Hf"/>
+                <constraint firstItem="w0W-jM-rEe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="Kwn-QB-rCU"/>
                 <constraint firstItem="xcC-Zq-s6n" firstAttribute="top" secondItem="rGX-m7-FSc" secondAttribute="bottom" constant="16" id="ONB-Hw-T4C"/>
+                <constraint firstItem="QVr-ro-6Aj" firstAttribute="top" secondItem="n04-yx-yqR" secondAttribute="bottom" constant="16" id="QVK-HC-YKP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rGX-m7-FSc" secondAttribute="trailing" constant="32" id="V6a-Xe-mZq"/>
                 <constraint firstItem="xcC-Zq-s6n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="a35-o9-JuG"/>
+                <constraint firstItem="QVr-ro-6Aj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="c98-XU-ejL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QVr-ro-6Aj" secondAttribute="trailing" constant="32" id="gw3-mz-QPZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mva-n9-mtJ" secondAttribute="trailing" constant="32" id="h85-Iz-63V"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w0W-jM-rEe" secondAttribute="trailing" constant="32" id="hjv-7P-5fG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tmH-rA-ioj" secondAttribute="trailing" constant="32" id="iAJ-dL-lqe"/>
+                <constraint firstItem="n04-yx-yqR" firstAttribute="top" secondItem="tmH-rA-ioj" secondAttribute="bottom" constant="8" id="m42-Mo-hMs"/>
+                <constraint firstItem="tmH-rA-ioj" firstAttribute="top" secondItem="Mva-n9-mtJ" secondAttribute="bottom" constant="16" id="oHc-E4-MRC"/>
                 <constraint firstItem="rGX-m7-FSc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="pbA-WA-QBJ"/>
+                <constraint firstItem="T8P-29-sp8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="qQP-uF-MXr"/>
                 <constraint firstItem="rGX-m7-FSc" firstAttribute="top" secondItem="9Th-A1-XHs" secondAttribute="bottom" constant="100" id="sSS-x6-ZJd"/>
                 <constraint firstItem="9Th-A1-XHs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="uny-dQ-DeR"/>
+                <constraint firstItem="Mva-n9-mtJ" firstAttribute="top" secondItem="w0W-jM-rEe" secondAttribute="bottom" constant="16" id="wLm-dL-E7L"/>
                 <constraint firstItem="9Th-A1-XHs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="yxo-g3-P13"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
