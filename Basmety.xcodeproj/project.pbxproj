@@ -76,7 +76,6 @@
 		1059062826CD2D35005DD6E6 /* MovieDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059062526CD2D34005DD6E6 /* MovieDetailsUseCase.swift */; };
 		1059062926CD2D35005DD6E6 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059062626CD2D35005DD6E6 /* SearchUseCase.swift */; };
 		1059062A26CD2D35005DD6E6 /* BrowseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059062726CD2D35005DD6E6 /* BrowseUseCase.swift */; };
-		1059062C26CD2D57005DD6E6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059062B26CD2D56005DD6E6 /* AppCoordinator.swift */; };
 		1059064026CD601D005DD6E6 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1059062E26CD6014005DD6E6 /* Poppins-ExtraBold.ttf */; };
 		1059064126CD601D005DD6E6 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1059062F26CD6015005DD6E6 /* Poppins-Light.ttf */; };
 		1059064226CD601D005DD6E6 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1059063026CD6015005DD6E6 /* Poppins-ExtraLight.ttf */; };
@@ -113,6 +112,7 @@
 		1059067526CD60E5005DD6E6 /* ArbFONTS-Somar-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1059066326CD60E4005DD6E6 /* ArbFONTS-Somar-ExtraLightItalic.otf */; };
 		1059067626CD60E5005DD6E6 /* ArbFONTS-Somar-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1059066426CD60E5005DD6E6 /* ArbFONTS-Somar-ExtraBoldItalic.otf */; };
 		1059067726CD60E5005DD6E6 /* ArbFONTS-Somar-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1059066526CD60E5005DD6E6 /* ArbFONTS-Somar-MediumItalic.otf */; };
+		10BF91AB26DBB5320001684E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BF91AA26DBB5320001684E /* AppCoordinator.swift */; };
 		2F6C07FB1E22B622A5A61336 /* Pods_Basmety_BasmetyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE158497AD4DF2B541FEC405 /* Pods_Basmety_BasmetyUITests.framework */; };
 		33D8FF7F42D393961A50DA61 /* Pods_BasmetyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D42BFD496B05D95EAE374A /* Pods_BasmetyTests.framework */; };
 		55AE29151BEFDFC3903A38A5 /* Pods_Basmety.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C650E851B1931D4271FBC6 /* Pods_Basmety.framework */; };
@@ -214,7 +214,6 @@
 		1059062526CD2D34005DD6E6 /* MovieDetailsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsUseCase.swift; sourceTree = "<group>"; };
 		1059062626CD2D35005DD6E6 /* SearchUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
 		1059062726CD2D35005DD6E6 /* BrowseUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseUseCase.swift; sourceTree = "<group>"; };
-		1059062B26CD2D56005DD6E6 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppCoordinator.swift; path = "../../../../Cima-/Cima+/App/Coordinator/AppCoordinator.swift"; sourceTree = "<group>"; };
 		1059062E26CD6014005DD6E6 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		1059062F26CD6015005DD6E6 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		1059063026CD6015005DD6E6 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -251,6 +250,7 @@
 		1059066326CD60E4005DD6E6 /* ArbFONTS-Somar-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Somar-ExtraLightItalic.otf"; sourceTree = "<group>"; };
 		1059066426CD60E5005DD6E6 /* ArbFONTS-Somar-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Somar-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
 		1059066526CD60E5005DD6E6 /* ArbFONTS-Somar-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Somar-MediumItalic.otf"; sourceTree = "<group>"; };
+		10BF91AA26DBB5320001684E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		19CD6D0EF87289FC1D459672 /* Pods-Basmety-BasmetyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basmety-BasmetyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Basmety-BasmetyUITests/Pods-Basmety-BasmetyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		20C650E851B1931D4271FBC6 /* Pods_Basmety.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Basmety.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F75418992037B8166E8CA5 /* Pods-Basmety-BasmetyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basmety-BasmetyUITests.release.xcconfig"; path = "Target Support Files/Pods-Basmety-BasmetyUITests/Pods-Basmety-BasmetyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -515,7 +515,7 @@
 		105905C726CC3ECC005DD6E6 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				1059062B26CD2D56005DD6E6 /* AppCoordinator.swift */,
+				10BF91AA26DBB5320001684E /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1019,6 +1019,7 @@
 				1059061A26CD249B005DD6E6 /* UICollectionView+Extensions.swift in Sources */,
 				105905C226CC39C7005DD6E6 /* CreateAccountVM.swift in Sources */,
 				105905DE26CD22CD005DD6E6 /* BaseViewController.swift in Sources */,
+				10BF91AB26DBB5320001684E /* AppCoordinator.swift in Sources */,
 				1059060D26CD249B005DD6E6 /* BarButtonManager.swift in Sources */,
 				105905BE26CC39A7005DD6E6 /* OnBoardVM.swift in Sources */,
 				1059056B26CC0DE8005DD6E6 /* AppDelegate.swift in Sources */,
@@ -1035,7 +1036,6 @@
 				105905C426CC39D1005DD6E6 /* ForgtePasswordVM.swift in Sources */,
 				105905E926CD2342005DD6E6 /* RemoteMoviesDataSource.swift in Sources */,
 				105905DD26CD22CD005DD6E6 /* ViewModel.swift in Sources */,
-				1059062C26CD2D57005DD6E6 /* AppCoordinator.swift in Sources */,
 				105905D526CD22A4005DD6E6 /* UICollectionViewNibExtension.swift in Sources */,
 				105905A426CC384A005DD6E6 /* ConfigScreenVC.swift in Sources */,
 				1059061226CD249B005DD6E6 /* Logger.swift in Sources */,
