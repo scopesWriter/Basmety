@@ -10,6 +10,13 @@
 		048C97F126DE44D100751320 /* ServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C97EF26DE44D100751320 /* ServicesCell.swift */; };
 		048C97F226DE44D100751320 /* ServicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048C97F026DE44D100751320 /* ServicesCell.xib */; };
 		048C97F426DE44E200751320 /* ServicesCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C97F326DE44E200751320 /* ServicesCellVM.swift */; };
+		048C97F826DE53AB00751320 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C97F626DE53AB00751320 /* EditProfileVC.swift */; };
+		048C97F926DE53AB00751320 /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048C97F726DE53AB00751320 /* EditProfileVC.xib */; };
+		048C97FB26DE69B200751320 /* EditProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C97FA26DE69B200751320 /* EditProfileVM.swift */; };
+		048C97FF26DE6CC300751320 /* EditProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C97FD26DE6CC300751320 /* EditProfileCell.swift */; };
+		048C980026DE6CC300751320 /* EditProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048C97FE26DE6CC300751320 /* EditProfileCell.xib */; };
+		048C980226DE6CCC00751320 /* EditProfileCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C980126DE6CCC00751320 /* EditProfileCellVM.swift */; };
+		048C980626DE74BD00751320 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C980526DE74BD00751320 /* ImagePickerManager.swift */; };
 		0495420926DCE7E500009D56 /* CatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495420726DCE7E500009D56 /* CatsCell.swift */; };
 		0495420A26DCE7E500009D56 /* CatsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495420826DCE7E500009D56 /* CatsCell.xib */; };
 		0495420C26DCE88200009D56 /* CatsCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495420B26DCE88200009D56 /* CatsCellVM.swift */; };
@@ -171,6 +178,13 @@
 		048C97EF26DE44D100751320 /* ServicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCell.swift; sourceTree = "<group>"; };
 		048C97F026DE44D100751320 /* ServicesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCell.xib; sourceTree = "<group>"; };
 		048C97F326DE44E200751320 /* ServicesCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCellVM.swift; sourceTree = "<group>"; };
+		048C97F626DE53AB00751320 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		048C97F726DE53AB00751320 /* EditProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileVC.xib; sourceTree = "<group>"; };
+		048C97FA26DE69B200751320 /* EditProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVM.swift; sourceTree = "<group>"; };
+		048C97FD26DE6CC300751320 /* EditProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileCell.swift; sourceTree = "<group>"; };
+		048C97FE26DE6CC300751320 /* EditProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileCell.xib; sourceTree = "<group>"; };
+		048C980126DE6CCC00751320 /* EditProfileCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileCellVM.swift; sourceTree = "<group>"; };
+		048C980526DE74BD00751320 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		0495420726DCE7E500009D56 /* CatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCell.swift; sourceTree = "<group>"; };
 		0495420826DCE7E500009D56 /* CatsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatsCell.xib; sourceTree = "<group>"; };
 		0495420B26DCE88200009D56 /* CatsCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCellVM.swift; sourceTree = "<group>"; };
@@ -361,6 +375,44 @@
 				048C97F326DE44E200751320 /* ServicesCellVM.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		048C97F526DE539600751320 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				048C97FC26DE6CB000751320 /* Cells */,
+				048C97F626DE53AB00751320 /* EditProfileVC.swift */,
+				048C97F726DE53AB00751320 /* EditProfileVC.xib */,
+				048C97FA26DE69B200751320 /* EditProfileVM.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		048C97FC26DE6CB000751320 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				048C97FD26DE6CC300751320 /* EditProfileCell.swift */,
+				048C97FE26DE6CC300751320 /* EditProfileCell.xib */,
+				048C980126DE6CCC00751320 /* EditProfileCellVM.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		048C980326DE74A200751320 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				1016D45E26D6D385002D9FD7 /* SearchView.swift */,
+				1016D46026D6D3EF002D9FD7 /* SearchView.xib */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		048C980426DE74AF00751320 /* ImagePickerManager */ = {
+			isa = PBXGroup;
+			children = (
+				048C980526DE74BD00751320 /* ImagePickerManager.swift */,
+			);
+			path = ImagePickerManager;
 			sourceTree = "<group>";
 		};
 		0495420626DCE78A00009D56 /* Cells */ = {
@@ -653,6 +705,7 @@
 		1059059F26CC3693005DD6E6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				048C97F526DE539600751320 /* EditProfile */,
 				049C77D126DBC9B300182212 /* Favorites */,
 				049C77CA26DBC94900182212 /* Profile */,
 				049C77C326DBC81400182212 /* Offers */,
@@ -670,8 +723,8 @@
 		105905A026CC3697005DD6E6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				1016D45E26D6D385002D9FD7 /* SearchView.swift */,
-				1016D46026D6D3EF002D9FD7 /* SearchView.xib */,
+				048C980426DE74AF00751320 /* ImagePickerManager */,
+				048C980326DE74A200751320 /* SearchView */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1050,6 +1103,7 @@
 				1059064B26CD601D005DD6E6 /* Poppins-ThinItalic.ttf in Resources */,
 				1059064C26CD601D005DD6E6 /* Poppins-BoldItalic.ttf in Resources */,
 				105905B926CC38CA005DD6E6 /* ForgetPasswordVC.xib in Resources */,
+				048C97F926DE53AB00751320 /* EditProfileVC.xib in Resources */,
 				1059064E26CD601D005DD6E6 /* Poppins-Bold.ttf in Resources */,
 				1059067326CD60E5005DD6E6 /* ArbFONTS-Somar-RegularItalic.otf in Resources */,
 				1016D45B26D6CFEB002D9FD7 /* HomeVC.xib in Resources */,
@@ -1071,6 +1125,7 @@
 				1059067226CD60E5005DD6E6 /* ArbFONTS-Somar-ThinItalic.otf in Resources */,
 				1059067426CD60E5005DD6E6 /* ArbFONTS-Somar-ExtraBold.otf in Resources */,
 				1059064126CD601D005DD6E6 /* Poppins-Light.ttf in Resources */,
+				048C980026DE6CC300751320 /* EditProfileCell.xib in Resources */,
 				0495421126DCEA5A00009D56 /* HomeHeader.xib in Resources */,
 				1059064326CD601D005DD6E6 /* Poppins-BlackItalic.ttf in Resources */,
 				1059064426CD601D005DD6E6 /* Poppins-Black.ttf in Resources */,
@@ -1252,10 +1307,13 @@
 				1059061A26CD249B005DD6E6 /* UICollectionView+Extensions.swift in Sources */,
 				105905C226CC39C7005DD6E6 /* CreateAccountVM.swift in Sources */,
 				105905DE26CD22CD005DD6E6 /* BaseViewController.swift in Sources */,
+				048C980226DE6CCC00751320 /* EditProfileCellVM.swift in Sources */,
+				048C97FF26DE6CC300751320 /* EditProfileCell.swift in Sources */,
 				049C77D026DBC98700182212 /* ProfileVM.swift in Sources */,
 				0495421D26DCF96C00009D56 /* MostPopularCell.swift in Sources */,
 				10BF91AB26DBB5320001684E /* AppCoordinator.swift in Sources */,
 				1059060D26CD249B005DD6E6 /* BarButtonManager.swift in Sources */,
+				048C97F826DE53AB00751320 /* EditProfileVC.swift in Sources */,
 				105905BE26CC39A7005DD6E6 /* OnBoardVM.swift in Sources */,
 				1059056B26CC0DE8005DD6E6 /* AppDelegate.swift in Sources */,
 				1059060B26CD249B005DD6E6 /* LocalizationManager.swift in Sources */,
@@ -1265,6 +1323,7 @@
 				1059061026CD249B005DD6E6 /* UIImage+Extesnions.swift in Sources */,
 				1011B4E026CD9D2A00A1AD01 /* WizardCell.swift in Sources */,
 				1059062326CD28B3005DD6E6 /* Genre.swift in Sources */,
+				048C97FB26DE69B200751320 /* EditProfileVM.swift in Sources */,
 				105905B326CC38B6005DD6E6 /* CreateAccountVC.swift in Sources */,
 				105905C026CC39BD005DD6E6 /* LoginVM.swift in Sources */,
 				105905E826CD2342005DD6E6 /* RxSwift+Moya+Extensions.swift in Sources */,
@@ -1297,6 +1356,7 @@
 				1059062026CD28B3005DD6E6 /* Page.swift in Sources */,
 				1059060F26CD249B005DD6E6 /* KeyboardManager.swift in Sources */,
 				0495423426DD390400009D56 /* ProfileCellVM.swift in Sources */,
+				048C980626DE74BD00751320 /* ImagePickerManager.swift in Sources */,
 				1016D45A26D6CFEB002D9FD7 /* HomeVC.swift in Sources */,
 				1059062126CD28B3005DD6E6 /* Movie.swift in Sources */,
 				1059061626CD249B005DD6E6 /* PaddingTextField.swift in Sources */,

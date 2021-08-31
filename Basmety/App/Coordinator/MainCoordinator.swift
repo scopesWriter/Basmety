@@ -14,8 +14,8 @@ enum MainRoute: Route {
     case profile
     case favorites
     case dismiss
+    case editProfile
 }
-
 
 class MainCoordinator: TabBarCoordinator<MainRoute> {
     
@@ -95,6 +95,15 @@ class MainCoordinator: TabBarCoordinator<MainRoute> {
             return .select(index: 3)
         case .dismiss:
             return .dismiss()
+        case .editProfile:
+            let editProfileVC = EditProfileVC(
+                viewModel: EditProfileVM(
+                    router: weakRouter,
+                    useCase: MovieDetailsUseCase.init(movieID: 1, moviesRepository: RepoImpl())
+                )
+            )
+            editProfileVC.modalPresentationStyle = .overFullScreen
+            return .present(editProfileVC)
         }
     }
     

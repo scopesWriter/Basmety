@@ -63,6 +63,10 @@ class ProfileVM: ViewModel {
             }
         }
         .disposed(by: disposeBag)
+        
+        editProfileSubject.subscribe { [weak self] _ in
+            self?.router.trigger(.editProfile)
+        }.disposed(by: disposeBag)
     }
     
 }

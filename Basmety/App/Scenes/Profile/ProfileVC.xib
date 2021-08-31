@@ -55,16 +55,16 @@
                     </constraints>
                 </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nFm-9l-zVo">
-                    <rect key="frame" x="140" y="559" width="134" height="25.5"/>
+                    <rect key="frame" x="146.5" y="559" width="121.5" height="21"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsc-Ba-jD5">
-                            <rect key="frame" x="0.0" y="0.0" width="105.5" height="25.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="96" height="21"/>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                             <color key="textColor" name="CustomGray"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YS-Kb-jpP">
-                            <rect key="frame" x="110.5" y="0.0" width="23.5" height="25.5"/>
+                            <rect key="frame" x="101" y="0.0" width="20.5" height="21"/>
                             <fontDescription key="fontDescription" name="Poppins-Black" family="Poppins" pointSize="18"/>
                             <color key="textColor" name="PenkishRed"/>
                             <nil key="highlightedColor"/>
@@ -89,16 +89,16 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RLc-Mt-XU4">
-                    <rect key="frame" x="135.5" y="154" width="143" height="35"/>
+                    <rect key="frame" x="141" y="154" width="132" height="35"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bishoy Badie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5c-wh-VzJ">
-                            <rect key="frame" x="0.0" y="0.0" width="117.5" height="35"/>
+                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="35"/>
                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                             <color key="textColor" name="CustomGray"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syd-Wg-hxJ">
-                            <rect key="frame" x="122.5" y="0.0" width="20.5" height="35"/>
+                            <rect key="frame" x="111.5" y="0.0" width="20.5" height="35"/>
                             <color key="tintColor" name="CustomGray"/>
                             <state key="normal" image="square.and.pencil" catalog="system"/>
                         </button>
