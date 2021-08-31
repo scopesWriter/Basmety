@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArbFONTS-Somar-Regular.otf">
+            <string>Somar-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesVC" customModule="Basmety" customModuleProvider="target">
+            <connections>
+                <outlet property="corneredView" destination="7xA-Gt-88x" id="yAg-Zy-n9i"/>
+                <outlet property="mainCV" destination="bn5-EL-jFS" id="62Y-W3-zk8"/>
+                <outlet property="pager" destination="Eyt-ZF-FLi" id="UK3-1n-uKq"/>
+                <outlet property="searchView" destination="JsK-xd-ndi" id="qG9-jX-8HS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Eyt-ZF-FLi">
+                    <rect key="frame" x="10" y="129" width="394" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Q8c-Mw-WCt"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Salones"/>
+                        <segment title="Services"/>
+                    </segments>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xA-Gt-88x">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <color key="backgroundColor" name="PenkishRed"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="3yS-ej-6Tf"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsK-xd-ndi">
+                    <rect key="frame" x="32" y="69" width="350" height="50"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sfA-WO-Acr">
+                            <rect key="frame" x="5" y="5" width="340" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by Salon of service name.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j84-US-ba2">
+                                    <rect key="frame" x="0.0" y="9.5" width="270" height="21"/>
+                                    <fontDescription key="fontDescription" name="Somar-Regular" family="Somar" pointSize="18"/>
+                                    <color key="textColor" name="CustomGray"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line.horizontal.3.decrease" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="N40-6b-NgE">
+                                    <rect key="frame" x="275" y="9" width="30" height="22"/>
+                                    <color key="tintColor" name="CustomGray"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="6Xh-EZ-nqu"/>
+                                        <constraint firstAttribute="width" constant="30" id="kRw-gn-UGq"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kMk-c2-lKH">
+                                    <rect key="frame" x="310" y="6" width="30" height="28"/>
+                                    <color key="tintColor" name="CustomGray"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="eas-Hr-ngW"/>
+                                        <constraint firstAttribute="width" constant="30" id="mCY-wT-gbB"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="sfA-WO-Acr" secondAttribute="bottom" constant="5" id="2zh-bh-jeC"/>
+                        <constraint firstItem="sfA-WO-Acr" firstAttribute="leading" secondItem="JsK-xd-ndi" secondAttribute="leading" constant="5" id="Bzj-tH-kEu"/>
+                        <constraint firstAttribute="trailing" secondItem="sfA-WO-Acr" secondAttribute="trailing" constant="5" id="UDU-Wr-yxa"/>
+                        <constraint firstAttribute="height" constant="50" id="aK6-UE-yFD"/>
+                        <constraint firstItem="sfA-WO-Acr" firstAttribute="top" secondItem="JsK-xd-ndi" secondAttribute="top" constant="5" id="mrv-uF-Be7"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bn5-EL-jFS">
+                    <rect key="frame" x="0.0" y="189" width="414" height="673"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vS7-Kg-XrV">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="7xA-Gt-88x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="CND-8p-0Om"/>
+                <constraint firstAttribute="trailing" secondItem="7xA-Gt-88x" secondAttribute="trailing" id="DuU-w2-jWL"/>
+                <constraint firstItem="bn5-EL-jFS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="H8B-TF-TAu"/>
+                <constraint firstItem="JsK-xd-ndi" firstAttribute="centerY" secondItem="7xA-Gt-88x" secondAttribute="bottom" id="Irh-D6-5Id"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JsK-xd-ndi" secondAttribute="trailing" constant="32" id="LKI-kD-ftq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bn5-EL-jFS" secondAttribute="bottom" id="Nbr-De-Ibn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Eyt-ZF-FLi" secondAttribute="trailing" constant="10" id="Pyb-8M-2wN"/>
+                <constraint firstItem="7xA-Gt-88x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ygo-lf-Y9X"/>
+                <constraint firstItem="Eyt-ZF-FLi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="aRL-IP-iar"/>
+                <constraint firstItem="Eyt-ZF-FLi" firstAttribute="top" secondItem="JsK-xd-ndi" secondAttribute="bottom" constant="10" id="fEI-Pp-63i"/>
+                <constraint firstItem="JsK-xd-ndi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="g4g-mh-6pi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bn5-EL-jFS" secondAttribute="trailing" id="hhQ-E7-xrG"/>
+                <constraint firstItem="bn5-EL-jFS" firstAttribute="top" secondItem="Eyt-ZF-FLi" secondAttribute="bottom" constant="10" id="qp0-Lk-pNs"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="90"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <namedColor name="CustomGray">
+            <color red="0.34901960784313724" green="0.36078431372549019" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PenkishRed">
+            <color red="0.75686274509803919" green="0.24705882352941178" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -2,7 +2,7 @@
 //  AppCoordinator.swift
 //  Basmety
 //
-//  Created by OSX on 29/08/2021.
+//  Created by Bishoy Badie on 29/08/2021.
 //
 
 import UIKit
@@ -13,13 +13,13 @@ enum AppRoute: Route {
     case onBoard
     case Login
     case register
+    case mainCoordinator
 }
 
 class AppCoordinator: NavigationCoordinator<AppRoute> {
     
     // MARK: Initialization
     init() {
-        
         super.init(initialRoute: .configScreen)
     }
     
@@ -54,6 +54,10 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
             return .present(loginVC)
         case .register:
             return .dismiss()
+        case .mainCoordinator:
+            let coordinator = MainCoordinator.init()
+            coordinator.rootViewController.modalPresentationStyle = .overFullScreen
+            return .present(coordinator)
         }
     }
     

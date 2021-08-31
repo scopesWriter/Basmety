@@ -7,7 +7,7 @@ target 'Basmety' do
 
   # Pods for Basmety
 pod 'IQKeyboardManagerSwift'
-pod 'NVActivityIndicatorView/Extended'
+pod 'PKHUD'
 pod 'SDWebImage'
 pod 'iOSDropDown'
 pod 'Cosmos', '~> 23.0'
@@ -17,6 +17,7 @@ pod 'CHIPageControl/Jalapeno'
 pod 'RxSwift'
 pod 'RxCocoa'
 pod 'XCoordinator'
+pod 'XCoordinator/RxSwift', '~> 2.0'
 pod 'Moya', '~> 14.0'
 pod 'Moya/RxSwift', '~> 14.0'
 

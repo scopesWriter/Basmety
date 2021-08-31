@@ -2,7 +2,7 @@
 //  OnBoardVM.swift
 //  Basmety
 //
-//  Created by OSX on 17/08/2021.
+//  Created by Bishoy badie on 17/08/2021.
 //
 
 import Foundation
@@ -17,7 +17,6 @@ class OnBoardVM: ViewModel {
     private let router: WeakRouter<AppRoute>
     private let useCase: MovieDetailsUseCase
     
-    
     let input: Input
     
     //MARK: Input Private properties
@@ -31,15 +30,11 @@ class OnBoardVM: ViewModel {
     private let wizardItemsSubject: BehaviorSubject<[WizardCellVM]> = .init(value: [.init(.init(image: "OnBoard", title: "Nearest", desc: "Easily Find Salons and SPAs Nearby")),
                                                                             .init(.init(image: "OnBoard", title: "Nearest", desc: "Easily Find Salons and SPAs Nearby")),
                                                                             .init(.init(image: "OnBoard", title: "Nearest", desc: "Easily Find Salons and SPAs Nearby"))])
-//    private let wizardCount: PublishSubject<Int> = .init()
-    
-    
+        
     let output: Output
     
     struct Output {
         let wizardItems: Driver<[WizardCellVM]>
-        
-//        let wizardCounter: PublishSubject<Int>
     }
     
     init(router: WeakRouter<AppRoute>, useCase: MovieDetailsUseCase) {
@@ -47,7 +42,6 @@ class OnBoardVM: ViewModel {
         self.useCase = useCase
         
         output = Output(wizardItems: wizardItemsSubject.asDriver(onErrorJustReturn: []))
-//        wizardCount.onNext()
 
         
         input = Input(asGuestTapped: asGuestClicked.asObserver())
@@ -55,7 +49,7 @@ class OnBoardVM: ViewModel {
         //inputs
         asGuestClicked.subscribe { [weak self] _ in
             guard let self = self else { return }
-            self.router.trigger(.Login)
+            self.router.trigger(.mainCoordinator)
         }
         .disposed(by: disposeBag)
     }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="AdsHeader" customModule="Basmety" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jF-aj-ZOX">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UeX-xI-aCm">
+                            <rect key="frame" x="10" y="5" width="300" height="40"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="UeX-xI-aCm" secondAttribute="bottom" constant="5" id="CbE-f1-Kv0"/>
+                        <constraint firstItem="UeX-xI-aCm" firstAttribute="leading" secondItem="6jF-aj-ZOX" secondAttribute="leading" constant="10" id="ioY-nR-DeG"/>
+                        <constraint firstItem="UeX-xI-aCm" firstAttribute="top" secondItem="6jF-aj-ZOX" secondAttribute="top" constant="5" id="oYz-BU-Hhc"/>
+                        <constraint firstAttribute="trailing" secondItem="UeX-xI-aCm" secondAttribute="trailing" constant="10" id="rav-CJ-taB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6jF-aj-ZOX" secondAttribute="bottom" id="bgJ-0i-0L4"/>
+                <constraint firstItem="6jF-aj-ZOX" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="bwd-gK-zXa"/>
+                <constraint firstItem="6jF-aj-ZOX" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="elC-hn-0xf"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="6jF-aj-ZOX" secondAttribute="trailing" id="gPP-8d-Np6"/>
+            </constraints>
+            <connections>
+                <outlet property="mainImage" destination="UeX-xI-aCm" id="ctf-Xh-sfa"/>
+                <outlet property="mainView" destination="6jF-aj-ZOX" id="tE2-Yc-y5i"/>
+            </connections>
+            <point key="canvasLocation" x="129" y="90"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

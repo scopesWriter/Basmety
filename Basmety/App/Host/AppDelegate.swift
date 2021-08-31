@@ -25,6 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.placeholderColor = ColorsManager.pickedColor(color: .penkishRed)
         IQKeyboardManager.shared.placeholderButtonColor = ColorsManager.pickedColor(color: .penkishRed)
+        
+        /// NavigationBar Optimization
+        UINavigationBar.appearance().barTintColor = ColorsManager.pickedColor(color: .penkishRed)
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         return true
     }
 }

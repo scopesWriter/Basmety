@@ -19,9 +19,11 @@ enum ColorsManager {
     case nbety
     case gold
     case penkishRed
+    case postag
+    case pink
     
-    static func pickedColor(color:ColorsManager)->UIColor{
-        switch color{
+    static func pickedColor(color: ColorsManager) -> UIColor {
+        switch color {
         case .customBlue:
             return UIColor(red:46/255, green: 108/255, blue: 164/255, alpha: 1)
         case .customGray:
@@ -42,13 +44,16 @@ enum ColorsManager {
             return UIColor(red: 255/255, green: 203/255, blue: 81/255, alpha: 1)
         case .penkishRed:
             return UIColor.init(red: 193/255, green: 63/255, blue: 85/255, alpha: 1)
+        case .postag:
+            return UIColor.init(red: 255/255, green: 234/255, blue: 205/255, alpha: 1)
+        case pink:
+            return UIColor.init(red: 247/255, green: 201/255, blue: 210/255, alpha: 1)
         }
     }
 }
 
-
-extension UIButton{
-    func setGradient(firstColor:UIColor = UIColor(red: 103/255, green: 94/255, blue: 243/255, alpha: 1),secondColor:UIColor = UIColor(red: 57/255, green: 53/255, blue: 136/255, alpha: 1)) {
+extension UIButton {
+    func setGradient(firstColor: UIColor = UIColor(red: 103/255, green: 94/255, blue: 243/255, alpha: 1),secondColor: UIColor = UIColor(red: 57/255, green: 53/255, blue: 136/255, alpha: 1)) {
         let layer = CAGradientLayer()
         layer.frame = self.bounds
         layer.startPoint = CGPoint(x: 0.5, y: 0)
