@@ -42,7 +42,31 @@ class FavoritesVC: BaseViewController<FavoritesVM> {
         default: break
         }
     }
-
+    
+    private func createEmptyView() -> UIView {
+        let view: UIView = UIView.init(frame: .zero)
+        view.backgroundColor =  .white
+        let mainSV: UIStackView = .init(frame: .zero)
+        let image: UIImageView = .init(frame: .zero)
+        let text: UILabel = UILabel(frame: .zero)
+        image.image = UIImage(named: "empty")
+        text.text = "No Favouriets yet"
+        mainSV.addArrangedSubview(image)
+        mainSV.addArrangedSubview(text)
+        mainSV.axis = .vertical
+        mainSV.spacing = 0
+        mainSV.distribution = .fill
+        mainSV.alignment = .fill
+        text.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        NSLayoutConstraint.activate([
+            mainSV.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            mainSV.topAnchor.constraint(equalTo: view.bottomAnchor),
+            mainSV.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mainSV.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        return view
+    }
+    
     /// Settings navigation with penkish red background and make it clear , bartitle intergation
     private func navigationCustomizations() {
         let notificationButton = UIBarButtonItem().createBarButtonItem(self, action: #selector(notificationTapped), imageName: "bell", BadgeCount: 10)
@@ -173,3 +197,5 @@ extension FavoritesVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
 }
+
+

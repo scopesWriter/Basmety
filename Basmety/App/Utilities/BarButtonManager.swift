@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIBarButtonItem{
+    
 func createBarButtonItem(_ target: AnyObject, action: Selector, imageName:String, BadgeCount: Int) -> UIBarButtonItem {
     
     let rightBtn = UIButton(type: UIButton.ButtonType.custom)

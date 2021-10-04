@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIView{
+extension UIView {
     
     func setGradientBackground(firstColor:UIColor,secondColor:UIColor) {
         let layer = CAGradientLayer()
@@ -33,7 +33,7 @@ extension UIView{
         layer.addSublayer(shapeLayer)
     }
     
-    func applyShadowLayer(cornerRadius: CGFloat = 8, shadowOpacity: Float = 0.3) {
+    func applyShadowLayer(cornerRadius: CGFloat = 8, shadowOpacity: Float = 0.125) {
         layer.cornerRadius = cornerRadius
         layer.masksToBounds = false
         layer.shadowColor = UIColor.black.cgColor

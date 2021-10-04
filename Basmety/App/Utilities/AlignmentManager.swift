@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UILabel{
-    func Aligned(){
+extension UILabel {
+    func Aligned() {
         if LocalizationManager.shared.getLanguage() == .Arabic {
             self.textAlignment = .right
         } else {

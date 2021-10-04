@@ -33,21 +33,21 @@ extension UICollectionView {
 
 extension UICollectionView {
     
-    func registerNib<cell:UICollectionViewCell>(cell:cell.Type){
+    func registerNib<cell: UICollectionViewCell>(cell: cell.Type) {
         let nibName = String(describing: cell)
         self.register(UINib(nibName: nibName, bundle: nil), forCellWithReuseIdentifier: nibName)
     }
     
-    func registerHeader<header:UICollectionReusableView>(header:header.Type){
+    func registerHeader<header: UICollectionReusableView>(header: header.Type){
         let nibName = String(describing: header)
         self.register(UINib(nibName: nibName, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: nibName)
     }
     
 }
 
-extension UICollectionViewFlowLayout{
+extension UICollectionViewFlowLayout {
     
-    open override var flipsHorizontallyInOppositeLayoutDirection: Bool{
+    open override var flipsHorizontallyInOppositeLayoutDirection: Bool {
         return LocalizationManager.shared.getLanguage() == .Arabic ? true : false
     }
     

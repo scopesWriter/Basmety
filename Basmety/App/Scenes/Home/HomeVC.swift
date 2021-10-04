@@ -9,7 +9,7 @@ import UIKit
 
 class HomeVC: BaseViewController<HomeVM> {
     
-    
+    //MARK: Properties
     var header: [String] = ["Categories", "", "Offers", "Most Popular"]
 
     //MARK: Outlets
@@ -17,6 +17,7 @@ class HomeVC: BaseViewController<HomeVM> {
     @IBOutlet weak var corneredView: UIView!
     @IBOutlet weak var searchView: UIView!
     
+    //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

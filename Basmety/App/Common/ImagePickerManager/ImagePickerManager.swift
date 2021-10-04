@@ -2,7 +2,7 @@
 //  ImagePickerManager.swift
 //  Basmety
 //
-//  Created by Mac on 31/08/2021.
+//  Created by Bishoy Badie on 31/08/2021.
 //
 
 import UIKit
