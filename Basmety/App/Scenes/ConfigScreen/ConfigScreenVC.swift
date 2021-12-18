@@ -2,11 +2,10 @@
 //  ConfigScreenVC.swift
 //  Basmety
 //
-//  Created by OSX on 17/08/2021.
+//  Created by Bishoy Badie on 17/08/2021.
 //
 
 import UIKit
-import iOSDropDown
 
 class ConfigScreenVC: BaseViewController<ConfigScreenVM> {
     
@@ -19,7 +18,7 @@ class ConfigScreenVC: BaseViewController<ConfigScreenVM> {
     @IBOutlet weak var getStartedButton: UIButton!
     @IBOutlet weak var englishButton: UIButton!
     @IBOutlet weak var arabicButton: UIButton!
-    @IBOutlet weak var countriesList: DropDown!
+//    @IBOutlet weak var countriesList: DropDown!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +31,11 @@ class ConfigScreenVC: BaseViewController<ConfigScreenVM> {
         englishButton.stylingButton(cornerRadius: 8, borderWidth: 1, borderColor: .lightGray, clipsToBounds: true)
         getStartedButton.stylingButton(cornerRadius: 8, borderWidth: 1, borderColor: .lightGray, clipsToBounds: true, backgroundColor: ColorsManager.pickedColor(color: .penkishRed))
         // The list of array to display. Can be changed dynamically
-        countriesList.optionArray = ["USA", "AUE", "KSA"]
+//        countriesList.optionArray = ["USA", "AUE", "KSA"]
         // The the Closure returns Selected Index and String
-        countriesList.didSelect { text, Id, ids in
-            Log.d("hello")
-        }
+//        countriesList.didSelect { text, Id, ids in
+//            Log.d("hello")
+//        }
     }
     
     private func bind() {

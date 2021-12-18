@@ -2,7 +2,6 @@ PODS:
   - Alamofire (5.4.3)
   - CHIPageControl/Jalapeno (0.2)
   - Cosmos (23.0.0)
-  - iOSDropDown (0.3.4)
   - IQKeyboardManagerSwift (6.5.6)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
@@ -31,7 +30,6 @@ PODS:
 DEPENDENCIES:
   - CHIPageControl/Jalapeno
   - Cosmos (~> 23.0)
-  - iOSDropDown
   - IQKeyboardManagerSwift
   - Moya (~> 14.0)
   - Moya/RxSwift (~> 14.0)
@@ -47,7 +45,6 @@ SPEC REPOS:
     - Alamofire
     - CHIPageControl
     - Cosmos
-    - iOSDropDown
     - IQKeyboardManagerSwift
     - Moya
     - PKHUD
@@ -61,7 +58,6 @@ SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   CHIPageControl: a787bf7205c9b7e7fbfc412be36c5e8636b68f86
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
-  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
@@ -71,6 +67,6 @@ SPEC CHECKSUMS:
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   XCoordinator: 9ee654fedef1ffede33d5c11677708a555c00542
 
-PODFILE CHECKSUM: 926f4facb954e021444a6a1db8ed0ea239bee45e
+PODFILE CHECKSUM: 70691ae752cac43fee706c0f701abc571716a7e9
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.2

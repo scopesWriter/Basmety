@@ -107,5 +107,4 @@ class MainCoordinator: TabBarCoordinator<MainRoute> {
         }
     }
     
-    
 }

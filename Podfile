@@ -9,11 +9,10 @@ target 'Basmety' do
 pod 'IQKeyboardManagerSwift'
 pod 'PKHUD'
 pod 'SDWebImage'
-pod 'iOSDropDown'
 pod 'Cosmos', '~> 23.0'
 pod 'CHIPageControl/Jalapeno'
 
-# Pods for clean archeticture
+# Pods for clean architecture
 pod 'RxSwift'
 pod 'RxCocoa'
 pod 'XCoordinator'

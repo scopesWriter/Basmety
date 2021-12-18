@@ -16,6 +16,7 @@ class SearchView: UIView {
     @IBOutlet weak var searchImage: UIImageView!
     @IBOutlet weak var filterImage: UIImageView!
     
+    //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -27,8 +28,8 @@ class SearchView: UIView {
     }
     
     private func commonInit() {
-//        let nib = UINib(nibName: String(describing: type(of: self)), bundle: Bundle(for: type(of: self)))
-//        nib.instantiate(withOwner: self, options: nil)
+        //let nib = UINib(nibName: String(describing: type(of: self)), bundle: Bundle(for: type(of: self)))
+        //nib.instantiate(withOwner: self, options: nil)
         Bundle.main.loadNibNamed("SearchView", owner: self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)
