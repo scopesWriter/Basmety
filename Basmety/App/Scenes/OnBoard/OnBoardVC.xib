@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -44,13 +44,13 @@
                     </state>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bQN-gb-grl">
-                    <rect key="frame" x="32" y="685.5" width="350" height="100"/>
+                    <rect key="frame" x="32" y="685.5" width="350" height="121"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="noy-ud-KCg">
-                            <rect key="frame" x="0.0" y="0.0" width="350" height="46"/>
+                            <rect key="frame" x="0.0" y="0.0" width="350" height="35"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALQ-a1-Gg4">
-                                    <rect key="frame" x="0.0" y="0.0" width="167" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="167" height="35"/>
                                     <color key="backgroundColor" name="CustomGray"/>
                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
                                     <state key="normal" title="Log In">
@@ -58,7 +58,7 @@
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXh-om-xrQ">
-                                    <rect key="frame" x="183" y="0.0" width="167" height="46"/>
+                                    <rect key="frame" x="183" y="0.0" width="167" height="35"/>
                                     <color key="backgroundColor" name="PenkishRed"/>
                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                     <state key="normal" title="Create New Account">
@@ -68,10 +68,10 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5qb-HD-chT">
-                            <rect key="frame" x="0.0" y="54" width="350" height="46"/>
+                            <rect key="frame" x="0.0" y="43" width="350" height="35"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kv5-GN-YNT">
-                                    <rect key="frame" x="0.0" y="0.0" width="167" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="167" height="35"/>
                                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                                     <state key="normal" title="Google">
@@ -79,7 +79,7 @@
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PT4-24-7aw">
-                                    <rect key="frame" x="183" y="0.0" width="167" height="46"/>
+                                    <rect key="frame" x="183" y="0.0" width="167" height="35"/>
                                     <color key="backgroundColor" red="0.0039215686269999999" green="0.37254901959999998" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                                     <state key="normal" title="Facebook">
@@ -88,9 +88,17 @@
                                 </button>
                             </subviews>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8w-zg-lt8">
+                            <rect key="frame" x="0.0" y="86" width="350" height="35"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                            <state key="normal" title="Apple ">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="bWo-qO-mtO"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="bWo-qO-mtO"/>
                     </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tce-Rf-gXQ">

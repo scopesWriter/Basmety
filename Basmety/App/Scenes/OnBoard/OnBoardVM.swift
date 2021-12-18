@@ -42,14 +42,13 @@ class OnBoardVM: ViewModel {
         self.useCase = useCase
         
         output = Output(wizardItems: wizardItemsSubject.asDriver(onErrorJustReturn: []))
-
         
         input = Input(asGuestTapped: asGuestClicked.asObserver())
         
         //inputs
         asGuestClicked.subscribe { [weak self] _ in
             guard let self = self else { return }
-            self.router.trigger(.mainCoordinator)
+            self.router.trigger(.Login)
         }
         .disposed(by: disposeBag)
     }
