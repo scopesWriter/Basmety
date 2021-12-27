@@ -18,6 +18,8 @@ class ConfigScreenVC: BaseViewController<ConfigScreenVM> {
     @IBOutlet weak var getStartedButton: UIButton!
     @IBOutlet weak var englishButton: UIButton!
     @IBOutlet weak var arabicButton: UIButton!
+    @IBOutlet weak var countriesList: UIPickerView!
+    @IBOutlet weak var chooseCountryLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +31,14 @@ class ConfigScreenVC: BaseViewController<ConfigScreenVM> {
         arabicButton.stylingButton(cornerRadius: 8, borderWidth: 1, borderColor: .lightGray, clipsToBounds: true)
         englishButton.stylingButton(cornerRadius: 8, borderWidth: 1, borderColor: .lightGray, clipsToBounds: true)
         getStartedButton.stylingButton(cornerRadius: 8, borderWidth: 1, borderColor: .lightGray, clipsToBounds: true, backgroundColor: ColorsManager.pickedColor(color: .penkishRed))
-        // The list of array to display. Can be changed dynamically
-        //        countriesList.optionArray = ["USA", "AUE", "KSA"]
-        // The the Closure returns Selected Index and String
-        //        countriesList.didSelect { text, Id, ids in
-        //            Log.d("hello")
-        //        }
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(chooseCountryTapped))
+        chooseCountryLabel.isUserInteractionEnabled = true
+        chooseCountryLabel.addGestureRecognizer(tap)
+        countriesList.delegate = self
+    }
+    
+    @objc func chooseCountryTapped() {
+        countriesList.isHidden = false
     }
     
     private func bind() {
@@ -80,6 +84,26 @@ class ConfigScreenVC: BaseViewController<ConfigScreenVM> {
     private func deSelectButton(button: UIButton) {
         button.setTitleColor(ColorsManager.pickedColor(color: .customGray), for: .normal)
         button.stylingButton(cornerRadius: 8, borderWidth: 1, borderColor: .lightGray, clipsToBounds: true)
+    }
+    
+}
+
+extension ConfigScreenVC: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 10
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "Egypt"
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        countriesList.isHidden = true
     }
     
 }

@@ -28,6 +28,8 @@
             <connections>
                 <outlet property="arabicButton" destination="u1C-LZ-6ZZ" id="oWJ-fU-042"/>
                 <outlet property="arabicText" destination="tmH-rA-ioj" id="gtR-Yl-2rz"/>
+                <outlet property="chooseCountryLabel" destination="tr8-bD-jy6" id="Z2y-X9-nBi"/>
+                <outlet property="countriesList" destination="mMd-En-CuD" id="vh3-Am-wFo"/>
                 <outlet property="countrySelectionArabic" destination="T8P-29-sp8" id="lSo-gg-AYU"/>
                 <outlet property="countrySelectionEnglish" destination="w0W-jM-rEe" id="2Eb-Ii-EWV"/>
                 <outlet property="englishButton" destination="qLc-9U-g7D" id="m5d-oh-7rT"/>
@@ -134,11 +136,27 @@
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-n9-mtJ">
                     <rect key="frame" x="32" y="495" width="350" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr8-bD-jy6">
+                            <rect key="frame" x="113" y="15" width="124" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="PenkishRed"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="CLM-a1-d8H"/>
+                        <constraint firstItem="tr8-bD-jy6" firstAttribute="centerY" secondItem="Mva-n9-mtJ" secondAttribute="centerY" id="gNG-wx-11F"/>
+                        <constraint firstItem="tr8-bD-jy6" firstAttribute="centerX" secondItem="Mva-n9-mtJ" secondAttribute="centerX" id="xfU-IY-DPg"/>
                     </constraints>
                 </view>
+                <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMd-En-CuD">
+                    <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Fer-02-KWe"/>
+                    </constraints>
+                </pickerView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -157,12 +175,15 @@
                 <constraint firstItem="xcC-Zq-s6n" firstAttribute="top" secondItem="rGX-m7-FSc" secondAttribute="bottom" constant="16" id="ONB-Hw-T4C"/>
                 <constraint firstItem="QVr-ro-6Aj" firstAttribute="top" secondItem="n04-yx-yqR" secondAttribute="bottom" constant="16" id="QVK-HC-YKP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rGX-m7-FSc" secondAttribute="trailing" constant="32" id="V6a-Xe-mZq"/>
+                <constraint firstItem="mMd-En-CuD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="XLg-TJ-drU"/>
+                <constraint firstItem="mMd-En-CuD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZCp-sd-5Hj"/>
                 <constraint firstItem="xcC-Zq-s6n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="a35-o9-JuG"/>
                 <constraint firstItem="QVr-ro-6Aj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="c98-XU-ejL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QVr-ro-6Aj" secondAttribute="trailing" constant="32" id="gw3-mz-QPZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mva-n9-mtJ" secondAttribute="trailing" constant="32" id="h85-Iz-63V"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w0W-jM-rEe" secondAttribute="trailing" constant="32" id="hjv-7P-5fG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tmH-rA-ioj" secondAttribute="trailing" constant="32" id="iAJ-dL-lqe"/>
+                <constraint firstItem="mMd-En-CuD" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="jha-lH-Ibz"/>
                 <constraint firstItem="n04-yx-yqR" firstAttribute="top" secondItem="tmH-rA-ioj" secondAttribute="bottom" constant="8" id="m42-Mo-hMs"/>
                 <constraint firstItem="tmH-rA-ioj" firstAttribute="top" secondItem="Mva-n9-mtJ" secondAttribute="bottom" constant="16" id="oHc-E4-MRC"/>
                 <constraint firstItem="rGX-m7-FSc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="pbA-WA-QBJ"/>
