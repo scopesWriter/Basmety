@@ -109,12 +109,12 @@ class OffersVC: BaseViewController<OffersVM> {
     func createSecondSection() -> NSCollectionLayoutSection {
         let inset: CGFloat = 2.5
         // Item
-        let itemSize = NSCollectionLayoutSize.init(widthDimension: .absolute(0), heightDimension: .absolute(0))
+        let itemSize = NSCollectionLayoutSize.init(widthDimension: .absolute(1), heightDimension: .absolute(1))
         let item = NSCollectionLayoutItem.init(layoutSize: itemSize)
         item.contentInsets = .init(top: inset, leading: inset, bottom: inset, trailing: inset)
         // Group
         let groupSize = NSCollectionLayoutSize.init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(0))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 5)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         // header
         let headerSize = NSCollectionLayoutSize.init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(80))
         let header = NSCollectionLayoutBoundarySupplementaryItem.init(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)

@@ -16,14 +16,14 @@ enum AppRoute: Route {
     case mainCoordinator
 }
 
-class AppCoordinator: NavigationCoordinator<AppRoute> {
+class AppCoordinator: ViewCoordinator<AppRoute> {
     
     // MARK: Initialization
     init() {
-        super.init(initialRoute: .configScreen)
+        super.init(rootViewController: UIViewController(), initialRoute: .configScreen)
     }
     
-    override func prepareTransition(for route: AppRoute) -> NavigationTransition {
+    override func prepareTransition(for route: AppRoute) -> ViewTransition {
         switch route {
         case .configScreen:
             let configVC = ConfigScreenVC(
@@ -33,7 +33,7 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
                 )
             )
             configVC.modalPresentationStyle = .overFullScreen
-            return .present(configVC)
+            return .switchTo(configVC, in: rootViewController)
         case .onBoard:
             let onBoardVC = OnBoardVC(
                 viewModel: OnBoardVM(
@@ -42,7 +42,7 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
                 )
             )
             onBoardVC.modalPresentationStyle = .overFullScreen
-            return .present(onBoardVC)
+            return .switchTo(onBoardVC, in: rootViewController)
         case .Login:
             let loginVC = LoginVC(
                 viewModel: LoginVM(
@@ -51,15 +51,15 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
                 )
             )
             loginVC.modalPresentationStyle = .overFullScreen
-            return .present(loginVC)
+            return .switchTo(loginVC, in: rootViewController)
         case .register:
             return .dismiss()
         case .mainCoordinator:
-            let coordinator = MainCoordinator.init()
-            coordinator.rootViewController.modalPresentationStyle = .overFullScreen
-            return .present(coordinator)
+            let coordinator = MainCoordinator()
+            return .switchTo(coordinator, in: rootViewController)
         }
     }
     
+  
 }
 

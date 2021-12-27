@@ -19,12 +19,14 @@ enum MainRoute: Route {
 
 class MainCoordinator: TabBarCoordinator<MainRoute> {
     
+    
     // MARK: Initialization
     init() {
         
         // app tab bar
         let appTabBarController = CustomTabBarController()
-        super.init(rootViewController: appTabBarController, initialRoute: .home)
+        super.init(rootViewController: appTabBarController, initialRoute: .favorites
+        )
         
         // Home
         let HomeVC = HomeVC(
@@ -77,8 +79,8 @@ class MainCoordinator: TabBarCoordinator<MainRoute> {
         favoritesVC.tabBarItem = favoritesBarbuttonItem
         let favorietsNavController = UINavigationController.init(rootViewController: favoritesVC)
         
+        appTabBarController.viewControllers = [homeNavController, offersNavController, profileNavController, favorietsNavController]
         
-        appTabBarController.viewControllers = [homeNavController, offersNavController, favorietsNavController, profileNavController]
     }
     
     // MARK: Overrides
@@ -107,4 +109,36 @@ class MainCoordinator: TabBarCoordinator<MainRoute> {
         }
     }
     
+}
+
+extension Transition {
+
+    static func presentFullScreen(_ presentable: Presentable, animation: Animation? = nil) -> Transition {
+        presentable.viewController?.modalPresentationStyle = .fullScreen
+        return .present(presentable, animation: animation)
+    }
+
+    static func dismissAll() -> Transition {
+        return Transition(presentables: [], animationInUse: nil) { rootViewController, options, completion in
+            guard let presentedViewController = rootViewController.presentedViewController else {
+                completion?()
+                return
+            }
+            presentedViewController.dismiss(animated: options.animated) {
+                Transition.dismissAll()
+                    .perform(on: rootViewController, with: options, completion: completion)
+            }
+        }
+    }
+
+    static func switchTo(_ presentable: Presentable, in container: Container) -> Transition {
+        for viewController in container.viewController.children {
+            viewController.willMove(toParent: nil)
+            viewController.view.removeFromSuperview()
+            viewController.removeFromParent()
+        }
+
+        return embed(presentable, in: container)
+    }
+
 }

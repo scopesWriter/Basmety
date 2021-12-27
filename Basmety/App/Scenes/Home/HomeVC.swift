@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxCocoa
 
 class HomeVC: BaseViewController<HomeVM> {
     
@@ -36,14 +37,14 @@ class HomeVC: BaseViewController<HomeVM> {
     
     /// Registering Cells , Headers , Delegate and datSource of collection view with a compositional layout
     private func configCollectionView() {
-        homeCV.rx.setDelegate(self).disposed(by: disposeBag)
+        homeCV.delegate = self
         homeCV.dataSource = self
-        homeCV.collectionViewLayout = createCompositionalLayout()
         homeCV.registerNib(cell: CatsCell.self)
         homeCV.registerHeader(header: HomeHeader.self)
         homeCV.registerNib(cell: OffersCell.self)
         homeCV.registerNib(cell: MostPopularCell.self)
         homeCV.registerHeader(header: AdsHeader.self)
+        homeCV.collectionViewLayout = createCompositionalLayout()
     }
     
     /// used to bind data
@@ -114,7 +115,7 @@ class HomeVC: BaseViewController<HomeVM> {
         case 3:
             return createFourthSection()
         default:
-            return createFirstSection()
+            return createFourthSection()
         }
     }
     
@@ -142,12 +143,12 @@ class HomeVC: BaseViewController<HomeVM> {
     func createSecondSection() -> NSCollectionLayoutSection {
         let inset: CGFloat = 2.5
         // Item
-        let itemSize = NSCollectionLayoutSize.init(widthDimension: .absolute(0), heightDimension: .absolute(0))
+        let itemSize = NSCollectionLayoutSize.init(widthDimension: .absolute(1), heightDimension: .absolute(1))
         let item = NSCollectionLayoutItem.init(layoutSize: itemSize)
         item.contentInsets = .init(top: inset, leading: inset, bottom: inset, trailing: inset)
         // Group
         let groupSize = NSCollectionLayoutSize.init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(0))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 5)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         // header
         let headerSize = NSCollectionLayoutSize.init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(80))
         let header = NSCollectionLayoutBoundarySupplementaryItem.init(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)

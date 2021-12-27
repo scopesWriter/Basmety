@@ -26,23 +26,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.placeholderColor = ColorsManager.pickedColor(color: .penkishRed)
         IQKeyboardManager.shared.placeholderButtonColor = ColorsManager.pickedColor(color: .penkishRed)
         
-        /// NavigationBar Optimization
-        UINavigationBar.appearance().barTintColor = ColorsManager.pickedColor(color: .penkishRed)
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        // White non-translucent navigation bar, supports dark appearance
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithTransparentBackground()
+            appearance.backgroundColor = ColorsManager.pickedColor(color: .penkishRed)
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        } else {
+            /// NavigationBar Optimization
+            UINavigationBar.appearance().barTintColor = ColorsManager.pickedColor(color: .penkishRed)
+            UINavigationBar.appearance().isTranslucent = false
+            UINavigationBar.appearance().shadowImage = UIImage()
+            UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        }
         return true
     }
 }
 
-//extension AppDelegate: LocalizationDelegate {
-//    func resetApp() {
-//        guard let window = window else { return }
-//        window.overrideUserInterfaceStyle = .light
-//        let vc = ConfigScreenVC.loadFromNib()
-//        window.rootViewController = vc
-//        let options: UIView.AnimationOptions = .transitionCrossDissolve
-//        let duration: TimeInterval = 0.3
-//        UIView.transition(with: window, duration: duration, options: options, animations: nil, completion: nil)
-//    }
-//}
+extension AppDelegate: LocalizationDelegate {
+    func resetApp() {
+        guard let window = window else { return }
+        window.overrideUserInterfaceStyle = .light
+        let vc = ConfigScreenVC.loadFromNib()
+        window.rootViewController = vc
+        let options: UIView.AnimationOptions = .transitionCrossDissolve
+        let duration: TimeInterval = 0.3
+        UIView.transition(with: window, duration: duration, options: options, animations: nil, completion: nil)
+    }
+}
