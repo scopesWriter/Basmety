@@ -79,7 +79,7 @@ class MainCoordinator: TabBarCoordinator<MainRoute> {
         favoritesVC.tabBarItem = favoritesBarbuttonItem
         let favorietsNavController = UINavigationController.init(rootViewController: favoritesVC)
         
-        appTabBarController.viewControllers = [homeNavController, offersNavController, profileNavController, favorietsNavController]
+        appTabBarController.viewControllers = [homeNavController, offersNavController, favorietsNavController, profileNavController]
         
     }
     

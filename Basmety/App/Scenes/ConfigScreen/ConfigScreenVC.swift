@@ -35,6 +35,7 @@ class ConfigScreenVC: BaseViewController<ConfigScreenVM> {
         chooseCountryLabel.isUserInteractionEnabled = true
         chooseCountryLabel.addGestureRecognizer(tap)
         countriesList.delegate = self
+        chooseCountryLabel.text = "Choose Country".localized
     }
     
     @objc func chooseCountryTapped() {
@@ -68,9 +69,9 @@ class ConfigScreenVC: BaseViewController<ConfigScreenVM> {
     @IBAction func languageButtonPressed(_ sender: UIButton) {
         switch sender {
         case self.englishButton:
-            print("a")
+            print("en")
         case self.arabicButton:
-            print("a")
+            print("ar")
         default:
             print("a")
         }
@@ -104,6 +105,7 @@ extension ConfigScreenVC: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         countriesList.isHidden = true
+        chooseCountryLabel.text = "Egypt"
     }
     
 }
